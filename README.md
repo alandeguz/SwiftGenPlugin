@@ -48,22 +48,6 @@ Do note that the paths (to resources) in a configuration will need to change dep
 1. Root configurations will need the full path to resources, such as `Sources/MyExample/Resources/Localizable.strings`. Or set the config's `input_dir` to `Sources/MyExample/Resources`. See an [example of a top-level configuration](./Examples/top-level-swiftgen.yml).
 2. Target configurations will need the relative path to resources, such as `Resources/Localizable.strings`. Or set the config's `input_dir` to `Resources`. See an [example of a target specific configuration](./Examples/target-specific-swiftgen.yml).
 
-## Using it as a command
-
-You can **manually** invoke SwiftGen using the following command:
-
-```bash
-swift package --allow-writing-to-package-directory generate-code-for-resources
-```
-
-The command will automatically search for `swiftgen.yml` configuration files in each of your targets' (or top-level) folder, and invoke SwiftGen for them.
-
-If you want to manually provide the configuration file and other settings, pass them along as extra arguments:
-
-```bash
-swift package --allow-writing-to-package-directory generate-code-for-resources --config MyConfig.yml
-```
-
 ---
 
 # Licence
